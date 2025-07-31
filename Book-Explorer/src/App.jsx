@@ -1,10 +1,11 @@
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
 import MainRoutes from "./routes/Mainroutes";
 
 function App() {
   return (
     <>
-      <nav> Simplenav</nav>
+      <Navbar/>
       <MainRoutes />
     </>
   );
