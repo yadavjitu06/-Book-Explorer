@@ -1,38 +1,25 @@
 import "./Home.css";
 import SearchBar from "../components/SearchBar/SearchBar";
 import BookCard from "../components/BookCard/BookCard";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { searchBook } from "../apis/GoogleBooks ";
 
-function Home({ searchRef }) { 
-  const [bookList, setBookList] = useState([]);
 
-  const handleSearch = async (query) => {
-    console.log("Search query mili!", query); 
-    try {
-      const response = await axios.get(searchBook(query));
-      if (response.data.items) {
-        setBookList(response.data.items); 
-      } else {
-        setBookList([]); 
-      }
-    } catch (error) {
-      console.error("Error while searching books:", error);
-      setBookList([]);
-    }
+
+import useBookList from "../hooks/useBookList";
+
+function Home() { 
+ const defaultQueries = ["rich dad poor dad", "harry potter"]; // Default queries
+  const { bookList, handleSearch } = useBookList(defaultQueries);
+
+  const handleSearchResults = (query) => {
+    console.log("Searching with query:", query); // Debug
+    handleSearch(query);
   };
-
-  // Default books fetch
-  useEffect(() => {
-    handleSearch("rich dad poor dad"); 
-  }, []);
 
   return (
     <>
       <div className="home-container">
         <div className="search-bar-container">
-          <SearchBar onSearch={handleSearch} ref={searchRef} /> {/* Ref pass  here */}
+          <SearchBar onSearch={handleSearchResults} /> 
         </div>
         <div className="book-card-wrapper">
           {bookList.length > 0 ? (

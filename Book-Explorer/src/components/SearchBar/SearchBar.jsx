@@ -1,35 +1,21 @@
-import { forwardRef, useImperativeHandle, useRef, useState } from "react";
+import {  useState } from "react";
 import "./SearchBar.css";
 
-const SearchBar = forwardRef(({ onSearch }, ref) => {
+const SearchBar =({ onSearch }) => {
   const [formData, setFormData] = useState({
     title: "",
     author: "",
     genre: "",
   });
   const [error, setError] = useState("");
-  const titleRef = useRef(null); 
-  const authorRef = useRef(null);
-  const genreRef = useRef(null);
+ 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  useImperativeHandle(ref, () => ({
-    focusInput() {
-      
-      [titleRef, authorRef, genreRef].forEach((inputRef) => {
-        if (inputRef.current) {
-          inputRef.current.classList.add("shake"); 
-          setTimeout(() => {
-            inputRef.current.classList.remove("shake"); // Remove after 500ms
-          }, 500);
-        }
-      });
-    },
-  }));
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -59,7 +45,7 @@ const SearchBar = forwardRef(({ onSearch }, ref) => {
           onChange={handleChange}
           placeholder="Search by Title"
           className="search-input"
-          ref={titleRef} 
+         
         />
         <input
           type="text"
@@ -68,7 +54,7 @@ const SearchBar = forwardRef(({ onSearch }, ref) => {
           onChange={handleChange}
           placeholder="Search by Author"
           className="search-input"
-          ref={authorRef} 
+          
         />
         <input
           type="text"
@@ -77,7 +63,7 @@ const SearchBar = forwardRef(({ onSearch }, ref) => {
           onChange={handleChange}
           placeholder="Search by Genre or Keyword"
           className="search-input"
-          ref={genreRef} 
+         
         />
         <button type="submit" className="search-button">
           Search
@@ -86,6 +72,6 @@ const SearchBar = forwardRef(({ onSearch }, ref) => {
       {error && <p className="error-text">{error}</p>}
     </div>
   );
-});
+};
 
 export default SearchBar;

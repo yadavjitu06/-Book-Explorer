@@ -1,38 +1,79 @@
 /* Navbar.css */
-
 .navbar-wrapper {
-  position: sticky; 
-  top: 0;            
-  z-index: 1000;     
-
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background-color: #f7f7f7;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', sans-serif;
+  gap: 2rem;
 }
-
-
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
+  min-width: 150px;
+}
+
+/* Flipkart-style Search Bar */
+.search-bar {
+  position: relative;
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+#result-list {
+    /* display: none; */
+    position: absolute;
+    background-color: whitesmoke;
+    color: black;
+    width: 100%;
+    border-radius: 10px;
+    max-height: 400px;
+    overflow-y: scroll;
+    border: 1px solid var(--light-prime-gray);
+}
+.autocomplete-result:hover {
+    background-color:gainsboro;
+
+}
+#result-list > .autocomplete-result {
+    font-size: large;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid black;
 }
 
 
+
+
+/* Right Section Styling */
 .right-section {
   display: flex;
   align-items: center;
-  gap: 2rem;
-}
-
-
-.nav-links {
-  display: flex;
   gap: 1.5rem;
+  margin-left: auto;
+  padding-left: 2rem; /* Optional: adds some space from search bar */
 }
 
 .nav-link {
@@ -40,10 +81,10 @@
   color: #333;
   font-weight: 500;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
   color: #007bff;
 }
 
@@ -61,30 +102,47 @@
   background-color: #555;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .navbar-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem;
     gap: 1rem;
   }
 
-  .right-section {
-    flex-direction: column;
-    align-items: flex-start;
+  .logo {
+    order: 1;
+    min-width: auto;
+  }
+
+  .search-bar {
+    order: 3;
     width: 100%;
-    gap: 0.8rem;
+    max-width: 100%;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+  .right-section {
+    order: 2;
+    min-width: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar input {
+    font-size: 0.9rem;
   }
 
-  .nav-link {
-    padding-left: 0.5rem;
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .right-section {
+    gap: 1rem;
   }
 
   .theme-toggle {
-    align-self: flex-start;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
   }
 }

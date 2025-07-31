@@ -5,65 +5,88 @@
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 10px;
-  margin:5px auto;
+  padding: 20px;
+  margin: 10px auto;
   color: #333;
-  min-height: 100px;
-}
-
-.book-image img {
-  width: 120px;
-  height: 180px;
-  object-fit: cover;
-  margin-right: 20px;
-  border-radius: 5px;
+  min-height: 120px;
+  gap: 20px;
 }
 
 .book-details {
-  text-align: left;
   flex-grow: 1;
+  text-align: left;
+  line-height: 1.6;
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+/* Book Title - Most prominent */
 .book-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700; /* Bolder */
+  margin-bottom: 0.3rem;
+  color: #111;
+  letter-spacing: 0.5px;
+  font-family: 'Georgia', serif; /* Different font for title */
 }
 
+/* Author Name - Distinct style */
 .book-author {
   font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 0.5rem;
+  color: #444;
+  margin-bottom: 0.7rem;
+  font-style: italic; /* Italicized */
+  border-bottom: 1px solid #ddd; /* Underline effect */
+  padding-bottom: 0.5rem;
+  display: inline-block; /* Only take needed width */
 }
 
+/* Description - Subtle and readable */
 .book-desc {
-  font-size: 0.9rem;
-  color: #777;
-  line-height: 1.4;
+  font-size: 0.95rem;
+  color: #555;
+  max-height: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.7; /* More readable spacing */
+  margin-top: 0.5rem;
+  background-color: #f0f0f0; /* Light background */
+  padding: 8px 12px;
+  border-radius: 4px;
 }
 
 /* Responsive Layout for Mobile */
 @media (max-width: 768px) {
   .book-card {
     flex-direction: column;
-    max-width: 90%;
-    padding: 15px;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
   }
 
   .book-image img {
-    margin-right: 0;
     margin-bottom: 15px;
   }
 
+  .book-details {
+    text-align: center;
+  }
+
   .book-title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .book-author {
     font-size: 1rem;
+    border-bottom: none; /* Remove underline on mobile */
+    margin-bottom: 0.5rem;
   }
 
   .book-desc {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    background-color: transparent; /* Remove background on mobile */
+    padding: 0;
   }
 }
