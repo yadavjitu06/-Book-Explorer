@@ -15,19 +15,18 @@ const SearchBar = () => {
         <input
           type="text"
           placeholder="Title"
-          value=" title"
-          
+         value="Readonly value" readOnly
         />
         <input
           type="text"
           placeholder="Author"
-          value= "author"
+          value="Readonly value" readOnly
           
         />
         <input
           type="text"
           placeholder="Genre"
-          value= "genre"
+          value="Readonly value" readOnly
           
         />
         <button type="submit">Search</button>

@@ -1,6 +1,10 @@
 /* Navbar.css */
 
 .navbar-wrapper {
+  position: sticky; 
+  top: 0;            
+  z-index: 1000;     
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,20 +14,22 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+
+
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
 }
 
-/* right section contains nav + theme */
+
 .right-section {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-/* only Search and Favorites links */
+
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -54,13 +60,6 @@
 .theme-toggle:hover {
   background-color: #555;
 }
-
-
-
-
-
-
-
 
 @media (max-width: 768px) {
   .navbar-wrapper {

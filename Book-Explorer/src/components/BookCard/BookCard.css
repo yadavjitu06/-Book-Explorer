@@ -1,0 +1,69 @@
+.book-card {
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px;
+  margin:5px auto;
+  color: #333;
+  min-height: 100px;
+}
+
+.book-image img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.book-details {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.book-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.book-author {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.book-desc {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* Responsive Layout for Mobile */
+@media (max-width: 768px) {
+  .book-card {
+    flex-direction: column;
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .book-image img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .book-title {
+    font-size: 1.3rem;
+  }
+
+  .book-author {
+    font-size: 1rem;
+  }
+
+  .book-desc {
+    font-size: 0.85rem;
+  }
+}
