@@ -7,7 +7,7 @@ const BookCard = ({ title, author, image, description }) => {
  return (
     <div className='book-card'>
       <div className='book-image'>
-        <img src={image} alt={title} />
+       <img src={image} alt={title} />
       </div>
       <div className='book-title'>
         <span>{title}</span>
@@ -23,6 +23,9 @@ const BookCard = ({ title, author, image, description }) => {
 };
 
 export default BookCard;
+
+
+
 
 
 
