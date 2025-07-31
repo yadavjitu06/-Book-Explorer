@@ -1,14 +1,13 @@
-
-import './App.css'
+import "./App.css";
+import MainRoutes from "./routes/Mainroutes";
 
 function App() {
-  
-
   return (
-   <>
-    Book Explorer
-   </>
-  )
+    <>
+      <nav> Simplenav</nav>
+      <MainRoutes />
+    </>
+  );
 }
 
-export default App
+export default App;
