@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import useBookList from "../../hooks/useBookList";
-import useDebounce from "../../hooks/useDebounce"; // Make sure to import your hook
+import useDebounce from "../../hooks/useDebounce";
 
 function Navbar() {
   const [isAutoCompleteVisible, setIsAutoCompleteVisible] = useState(false);
@@ -25,11 +25,13 @@ function Navbar() {
     navigate(`/book/${bookId}`);
     setIsAutoCompleteVisible(false);
     setSearchTerm('');
+    
   };
 
   return (
     <header className="navbar-wrapper">
-      <div className="logo" >Book Explorer</div>
+      <Link to="/" className="logo">Book Explorer</Link>
+
       
       <div className="search-bar">
         <input

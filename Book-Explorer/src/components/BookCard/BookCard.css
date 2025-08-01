@@ -22,42 +22,42 @@
   justify-content: center;
 }
 
-/* Book Title - Most prominent */
+
 .book-title {
   font-size: 1.6rem;
-  font-weight: 700; /* Bolder */
+  font-weight: 700; 
   margin-bottom: 0.3rem;
   color: #111;
   letter-spacing: 0.5px;
-  font-family: 'Georgia', serif; /* Different font for title */
+  font-family: 'Georgia', serif;
 }
 
-/* Author Name - Distinct style */
+
 .book-author {
   font-size: 1.1rem;
   color: #444;
   margin-bottom: 0.7rem;
-  font-style: italic; /* Italicized */
-  border-bottom: 1px solid #ddd; /* Underline effect */
+  font-style: italic; 
+  border-bottom: 1px solid #ddd;
   padding-bottom: 0.5rem;
-  display: inline-block; /* Only take needed width */
+  display: inline-block; 
 }
 
-/* Description - Subtle and readable */
+
 .book-desc {
   font-size: 0.95rem;
   color: #555;
   max-height: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.7; /* More readable spacing */
+  line-height: 1.7; 
   margin-top: 0.5rem;
-  background-color: #f0f0f0; /* Light background */
+  background-color: #f0f0f0; 
   padding: 8px 12px;
   border-radius: 4px;
 }
 
-/* Responsive Layout for Mobile */
+
 @media (max-width: 768px) {
   .book-card {
     flex-direction: column;
@@ -80,13 +80,13 @@
 
   .book-author {
     font-size: 1rem;
-    border-bottom: none; /* Remove underline on mobile */
+    border-bottom: none; 
     margin-bottom: 0.5rem;
   }
 
   .book-desc {
     font-size: 0.9rem;
-    background-color: transparent; /* Remove background on mobile */
+    background-color: transparent;
     padding: 0;
   }
 }

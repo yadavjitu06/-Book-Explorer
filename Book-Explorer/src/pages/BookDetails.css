@@ -1,0 +1,174 @@
+.book-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #555;
+  padding: 2rem;
+}
+
+.error-message {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #d32f2f;
+  padding: 2rem;
+  background-color: #ffebee;
+  border-radius: 8px;
+}
+
+.book-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.book-card-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.book-cover {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-info {
+  flex-grow: 1;
+}
+
+.book-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.book-authors, .book-published {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.25rem 0;
+}
+
+.book-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-section h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.25rem;
+}
+
+.book-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.book-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.genre {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: #e9ecef;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.book-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rating-value {
+  font-size: 1rem;
+  color: #666;
+}
+
+.book-price {
+  font-size: 1rem;
+  color: #666;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 0.5rem;
+}
+
+.discounted-price {
+  color: #d32f2f;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.buy-link {
+  text-decoration: none;
+  color: #2874f0;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.buy-link:hover {
+  color: #1a5ad6;
+}
+
+.pdf-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.pdf-link:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .book-details-container {
+    padding: 1rem;
+  }
+
+  .book-card-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .book-cover {
+    width: 120px;
+  }
+
+  .book-title {
+    font-size: 1.5rem;
+  }
+
+  .detail-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .book-description {
+    font-size: 0.9rem;
+  }
+}

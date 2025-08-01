@@ -8,8 +8,8 @@ function MainRoutes({ searchRef }) {
     <Routes>
       {/* routes contain multiple route */}
       <Route path="/" element={<Home searchRef={searchRef} />} />
-      <Route path="/book/:name" element={<BookDetails />} />
-      <Route path="/book/:name" element={<BookDetails />} />
+      <Route path="/book/:id" element={<BookDetails />} />
+      
       <Route path="*" element={<Error />} />
     </Routes>
   );

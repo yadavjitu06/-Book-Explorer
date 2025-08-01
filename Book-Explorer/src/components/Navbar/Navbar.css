@@ -8,7 +8,7 @@
   padding: 1rem 2rem;
   background-color: #f7f7f7;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   gap: 2rem;
 }
 
@@ -17,6 +17,8 @@
   font-weight: bold;
   color: #333;
   min-width: 150px;
+  text-decoration: none;
+  display: inline-block;
 }
 
 /* Flipkart-style Search Bar */
@@ -42,30 +44,26 @@
   border-radius: 4px;
 }
 #result-list {
-    /* display: none; */
-    position: absolute;
-    background-color: whitesmoke;
-    color: black;
-    width: 100%;
-    border-radius: 10px;
-    max-height: 400px;
-    overflow-y: scroll;
-    border: 1px solid var(--light-prime-gray);
+  /* display: none; */
+  position: absolute;
+  background-color: whitesmoke;
+  color: black;
+  width: 100%;
+  border-radius: 10px;
+  max-height: 400px;
+  overflow-y: scroll;
+  border: 1px solid var(--light-prime-gray);
 }
 .autocomplete-result:hover {
-    background-color:gainsboro;
-
+  background-color: gainsboro;
 }
 #result-list > .autocomplete-result {
-    font-size: large;
-    letter-spacing: 0;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-bottom: 1px solid black;
+  font-size: large;
+  letter-spacing: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid black;
 }
-
-
-
 
 /* Right Section Styling */
 .right-section {
@@ -73,7 +71,7 @@
   align-items: center;
   gap: 1.5rem;
   margin-left: auto;
-  padding-left: 2rem; /* Optional: adds some space from search bar */
+  padding-left: 2rem; 
 }
 
 .nav-link {
