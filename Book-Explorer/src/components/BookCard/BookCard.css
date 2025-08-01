@@ -2,12 +2,12 @@
   max-width: 80%;
   display: flex;
   align-items: center;
-  background-color: #f9f9f9;
+  background-color: var(--book-bg);
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px var(--book-shadow);
   padding: 20px;
   margin: 10px auto;
-  color: #333;
+  color: var(--book-text);
   min-height: 120px;
   gap: 20px;
 }
@@ -22,71 +22,34 @@
   justify-content: center;
 }
 
-
 .book-title {
   font-size: 1.6rem;
-  font-weight: 700; 
+  font-weight: 700;
   margin-bottom: 0.3rem;
-  color: #111;
+  color: var(--book-heading);
   letter-spacing: 0.5px;
-  font-family: 'Georgia', serif;
+  font-family: var(--font-serif);
 }
-
 
 .book-author {
   font-size: 1.1rem;
-  color: #444;
+  color: var(--book-author);
   margin-bottom: 0.7rem;
-  font-style: italic; 
-  border-bottom: 1px solid #ddd;
+  font-style: italic;
+  border-bottom: 1px solid var(--book-border);
   padding-bottom: 0.5rem;
-  display: inline-block; 
+  display: inline-block;
 }
-
 
 .book-desc {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--book-desc-text);
   max-height: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.7; 
+  line-height: 1.7;
   margin-top: 0.5rem;
-  background-color: #f0f0f0; 
+  background-color: var(--book-desc-bg);
   padding: 8px 12px;
   border-radius: 4px;
-}
-
-
-@media (max-width: 768px) {
-  .book-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .book-image img {
-    margin-bottom: 15px;
-  }
-
-  .book-details {
-    text-align: center;
-  }
-
-  .book-title {
-    font-size: 1.4rem;
-  }
-
-  .book-author {
-    font-size: 1rem;
-    border-bottom: none; 
-    margin-bottom: 0.5rem;
-  }
-
-  .book-desc {
-    font-size: 0.9rem;
-    background-color: transparent;
-    padding: 0;
-  }
 }

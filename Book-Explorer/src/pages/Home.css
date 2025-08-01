@@ -1,11 +1,11 @@
 .home-container {
   display: grid;
-  grid-template-columns: 1fr 3fr; 
-  gap: 10px;
-  padding: 20px;
-  max-width: 1200px;
+  grid-template-columns: 1fr 3fr;
+  gap: var(--gap-md, 10px);
+  padding: var(--spacing-lg, 20px);
+  max-width: var(--container-max-width, 1200px);
   margin: 0 auto;
-  align-items: start; 
+  align-items: start;
 }
 
 .search-bar-container {
@@ -14,46 +14,47 @@
   align-items: flex-start;
   height: auto;
   position: sticky;
-  top: 20px;
+  top: var(--spacing-md, 20px);
 }
 
 .book-card-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--gap-lg, 20px);
   justify-content: flex-start;
 }
 
 @media (max-width: 768px) {
   .home-container {
     grid-template-columns: 1fr;
-    padding: 10px;
+    padding: var(--spacing-md, 10px);
   }
 
   .search-bar-container {
     justify-content: center;
-    margin-bottom: 20px;
-    position: static; 
+    margin-bottom: var(--spacing-lg, 20px);
+    position: static;
   }
 
   .book-card-wrapper {
     justify-content: center;
   }
 }
+
 .no-books-message {
   text-align: center;
-  margin-top: 3rem;
-  padding: 2rem;
-  max-width: 600px;
+  margin-top: var(--spacing-xl, 3rem);
+  padding: var(--spacing-lg, 2rem);
+  max-width: var(--card-max-width, 600px);
   margin-left: auto;
   margin-right: auto;
-  background-color: #fefefe;
-  border: 2px dashed #ccc;
-  border-radius: 12px;
-  font-size: 1.1rem;
-  color: #444;
+  background-color: var(--white, #fefefe);
+  border: 2px dashed var(--border-muted, #ccc);
+  border-radius: var(--radius-lg, 12px);
+  font-size: var(--font-md, 1.1rem);
+  color: var(--text-dark, #444);
   line-height: 1.6;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm, 0 0 10px rgba(0, 0, 0, 0.05));
   animation: fadeIn 0.5s ease-in-out;
 }
 

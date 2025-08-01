@@ -1,0 +1,246 @@
+:root {
+ --book-bg: #1a1a1a;
+  --book-shadow: rgba(0, 0, 0, 0.3);
+  --book-text: #f5e6cc;
+  --book-heading: #e0c3a6;
+  --book-author: #d4af37;
+  --book-border: #2d2d2d;
+  --book-desc-text: #b76e79;
+  --book-desc-bg: linear-gradient(135deg, #1a1a1a, #2d2d2d); 
+  --font-serif: "Georgia", serif;
+
+  /* Navbar */
+  --navbar-bg: #1a1a1a;
+  --navbar-text: #f5e6cc;
+  --logo-font: "Segoe UI", sans-serif;
+  --logo-color: #d4af37;
+
+  /* Search */
+  --search-bg: #2d2d2d;
+  --search-input-text: #f5e6cc;
+  --autocomplete-bg: #2d2d2d;
+  --autocomplete-hover: #3d3d3d;
+  --autocomplete-border: #b76e79;
+  --autocomplete-item-text: #e0c3a6;
+
+  /* Theme & Link */
+  --theme-dark: #1a1a1a;
+  --theme-dark-hover: #2d2d2d;
+  --link-hover: #b76e79;
+
+  /* Typography */
+  --heading-size: 1.25rem;
+  --heading-weight: 600;
+  --title-font: 2rem;
+  --section-heading: 1.5rem;
+  --tag-font-size: 0.9rem;
+  --small-text: 1rem;
+  --font-md: 1.2rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2rem;
+  --font-xxl: 2.5rem;
+
+  /* Input/Buttons */
+  --border-color: #3d3d3d;
+  --input-radius: 6px;
+  --input-size: 1rem;
+  --input-text: #f5e6cc;
+  --btn-bg: #b76e79; 
+  --btn-hover: linear-gradient(135deg, #b76e79, #d4af37);
+  --btn-text: #1a1a1a; 
+  --btn-radius: 6px;
+  --btn-font-size: 1rem;
+  --btn-padding: 0.5rem 1rem;
+  --btn-padding-lg: 0.75rem 1.5rem;
+
+  /* Colors */
+  --white: #f5e6cc; 
+  --white-alt: #e0c3a6;
+  --background-light: #2d2d2d;
+  --primary: #b76e79;
+  --primary-dark: #a3545f;
+  --primary-darkest: #8a3f4a;
+  --secondary-link: #d4af37;
+  --secondary-hover: #c99b2e;
+  --highlight-color: #d4af37; 
+  --danger: #e74c3c;
+  --danger-dark: #c0392b;
+
+  --text-dark: #f5e6cc;
+  --text-muted: #e0c3a6;
+  --text-light: #b76e79;
+
+  /* Errors */
+  --error-color: #e74c3c;
+  --error-bg: #2d2d2d;
+  --error-font-size: 1.5rem;
+
+  /* Tag */
+  --tag-bg: #3d3d3d;
+
+  /* Borders & Radius */
+  --border-radius: 8px;
+  --border-light: #2d2d2d;
+  --border-muted: #3d3d3d;
+  --radius-sm: 5px;
+  --radius-lg: 12px;
+  --radius-xl: 15px;
+
+  /* Shadows */
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  /* Container */
+  --container-max-width: 1200px;
+  --card-max-width: 600px;
+
+  /* Spacing */
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 3rem;
+  --gap-md: 10px;
+  --gap-lg: 20px;
+
+  /* Loader */
+  --loading-font-size: 1.5rem;
+
+  --dark-blue: #000000; 
+
+[data-theme='light'] {
+  /* light mode */
+   --book-bg: #f9f9f9;
+  --book-shadow: rgba(0, 0, 0, 0.1);
+  --book-text: #333;
+  --book-heading: #111;
+  --book-author: #444;
+  --book-border: #ddd;
+  --book-desc-text: #555;
+  --book-desc-bg: #f0f0f0;
+  --font-serif: "Georgia", serif;
+
+  /* Navbar */
+  --navbar-bg: #f7f7f7;
+  --navbar-text: #333;
+  --logo-font: "Segoe UI", sans-serif;
+  --logo-color: #333;
+
+  /* Search */
+  --search-bg: #f8f8f8;
+  --search-input-text: #000;
+  --autocomplete-bg: whitesmoke;
+  --autocomplete-hover: gainsboro;
+  --autocomplete-border: black;
+  --autocomplete-item-text: black;
+
+  /* Theme & Link */
+  --theme-dark: #333;
+  --theme-dark-hover: #555;
+  --link-hover: #007bff;
+
+  /* Typography */
+  --heading-size: 1.25rem;
+  --heading-weight: 600;
+  --title-font: 2rem;
+  --section-heading: 1.5rem;
+  --tag-font-size: 0.9rem;
+  --small-text: 1rem;
+  --font-md: 1.2rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2rem;
+  --font-xxl: 2.5rem;
+
+  /* Input/Buttons */
+  --border-color: #ccc;
+  --input-radius: 6px;
+  --input-size: 1rem;
+  --input-text: #000;
+  --btn-bg: #111;
+  --btn-hover: #333;
+  --btn-text: white;
+  --btn-radius: 6px;
+  --btn-font-size: 1rem;
+  --btn-padding: 0.5rem 1rem;
+  --btn-padding-lg: 0.75rem 1.5rem;
+
+  /* Colors */
+  --white: #ffffff;
+  --white-alt: #fefefe;
+  --background-light: #f9f9f9;
+  --primary: #3498db;
+  --primary-dark: #2c3e50;
+  --primary-darkest: #1a5ad6;
+  --secondary-link: #007bff;
+  --secondary-hover: #0056b3;
+  --highlight-color: #d32f2f;
+  --danger: #e74c3c;
+  --danger-dark: #c0392b;
+
+  --text-dark: #444;
+  --text-muted: #7f8c8d;
+  --text-light: #999;
+
+  /* Errors */
+  --error-color: #d32f2f;
+  --error-bg: #ffebee;
+  --error-font-size: 1.5rem;
+
+  /* Tag */
+  --tag-bg: #e9ecef;
+
+  /* Borders & Radius */
+  --border-radius: 8px;
+  --border-light: #eee;
+  --border-muted: #ccc;
+  --radius-sm: 5px;
+  --radius-lg: 12px;
+  --radius-xl: 15px;
+
+  /* Shadows */
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 0 10px rgba(0, 0, 0, 0.05);
+
+  /* Container */
+  --container-max-width: 1200px;
+  --card-max-width: 600px;
+
+  /* Spacing */
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 3rem;
+  --gap-md: 10px;
+  --gap-lg: 20px;
+
+  /* Loader */
+  --loading-font-size: 1.5rem;
+
+
+
+  --dark-blue: white;
+  
+}
+
+
+
+
+#app-wrapper {
+  background-color: var(--dark-blue);
+}
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+}

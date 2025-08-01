@@ -1,0 +1,96 @@
+.favorites-container {
+  padding: var(--spacing-xl, 2rem);
+  max-width: var(--container-max-width, 1200px);
+  margin: 0 auto;
+}
+
+.favorites-title {
+  text-align: center;
+  font-size: var(--font-xxl, 2.5rem);
+  color: var(--primary-dark, #2c3e50);
+  margin-bottom: var(--spacing-xl, 2rem);
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-lg, 1.5rem);
+}
+
+.favorite-card {
+  position: relative;
+  background: var(--white, #fff);
+  border-radius: var(--radius-lg, 10px);
+  overflow: hidden;
+  box-shadow: var(--shadow-md, 0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-5px);
+}
+
+.remove-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: var(--btn-padding, 0.5rem 1rem);
+  background-color: var(--danger, #e74c3c);
+  color: var(--white, #fff);
+  border: none;
+  border-radius: var(--radius-sm, 5px);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: var(--danger-dark, #c0392b);
+}
+
+.favorites-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: var(--spacing-xl, 2rem);
+  background-color: var(--background-light, #f9f9f9);
+  border-radius: var(--radius-xl, 15px);
+  box-shadow: var(--shadow-lg, 0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.favorites-empty p {
+  font-size: var(--font-lg, 1.5rem);
+  color: var(--text-muted, #7f8c8d);
+  margin-bottom: var(--spacing-md, 1rem);
+}
+
+.favorites-empty button {
+  padding: var(--btn-padding-lg, 0.75rem 1.5rem);
+  background-color: var(--primary, #3498db);
+  color: var(--white, #fff);
+  border: none;
+  border-radius: var(--radius-sm, 5px);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.favorites-empty button:hover {
+  background-color: var(--primary-dark, #2980b9);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .favorites-title {
+    font-size: var(--font-xl, 2rem);
+  }
+
+  .favorites-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .favorites-empty p {
+    font-size: var(--font-md, 1.2rem);
+  }
+}

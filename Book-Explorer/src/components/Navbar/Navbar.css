@@ -1,4 +1,3 @@
-/* Navbar.css */
 .navbar-wrapper {
   position: sticky;
   top: 0;
@@ -6,16 +5,16 @@
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #f7f7f7;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  font-family: "Segoe UI", sans-serif;
+  background-color: var(--navbar-bg);
+  box-shadow: 0 2px 8px var(--box-shadow-light);
+  font-family: var(--logo-font);
   gap: 2rem;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333;
+  color: var(--logo-color);
   min-width: 150px;
   text-decoration: none;
   display: inline-block;
@@ -29,9 +28,9 @@
   display: flex;
   align-items: center;
   height: 45px;
-  background: white;
+  background: var(--search-bg);
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--box-shadow-light);
 }
 
 .search-bar input {
@@ -42,52 +41,54 @@
   outline: none;
   font-size: 1rem;
   border-radius: 4px;
+  color: var(--search-input-text);
 }
+
 #result-list {
-  /* display: none; */
   position: absolute;
-  background-color: whitesmoke;
-  color: black;
+  background-color: var(--autocomplete-bg);
+  color: var(--autocomplete-item-text);
   width: 100%;
   border-radius: 10px;
   max-height: 400px;
   overflow-y: scroll;
-  border: 1px solid var(--light-prime-gray);
+  border: 1px solid var(--autocomplete-border);
 }
+
 .autocomplete-result:hover {
-  background-color: gainsboro;
+  background-color: var(--autocomplete-hover);
 }
+
 #result-list > .autocomplete-result {
   font-size: large;
   letter-spacing: 0;
   margin-bottom: 1rem;
   padding: 1rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--autocomplete-border);
 }
 
-/* Right Section Styling */
 .right-section {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   margin-left: auto;
-  padding-left: 2rem; 
+  padding-left: 2rem;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: var(--navbar-text);
   font-weight: 500;
   transition: color 0.3s ease;
   white-space: nowrap;
 }
 
 .nav-link:hover {
-  color: #007bff;
+  color: var(--link-hover);
 }
 
 .theme-toggle {
-  background-color: #333;
+  background-color: var(--theme-dark);
   color: #fff;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
@@ -97,10 +98,9 @@
 }
 
 .theme-toggle:hover {
-  background-color: #555;
+  background-color: var(--theme-dark-hover);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .navbar-wrapper {
     flex-wrap: wrap;
@@ -124,6 +124,11 @@
     min-width: auto;
     margin-left: auto;
   }
+}
+
+.theme-icon {
+  font-size: x-large;
+  cursor: pointer;
 }
 
 @media (max-width: 480px) {
